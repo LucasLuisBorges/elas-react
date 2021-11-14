@@ -1,13 +1,17 @@
 ﻿import { useContext, useState } from "react";
 import { AuthContext } from "../../contexts/auth";
-import {
-  Container,
-} from "./styles";
+import GlobalStyles from '../../styles/GlobalStyles';
+import Layout from "../../components/Layout";
 
 const Dashboard = () => {
-  const { user, signOut } = useContext(AuthContext);
+  return (
+    <>
+      <Layout />
 
-  return <Container onClick={signOut}>sair</Container>;
+      <GlobalStyles />
+    </>
+  );
+
 };
 
 export { Dashboard };
